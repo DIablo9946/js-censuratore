@@ -19,7 +19,7 @@
 // Faccio la condizione affinchè le parole proibite vengano sostituite dall'x
 
 function censura(testo, parole) {
-
+  var cont = 0;
   var arrText = testo.split(" ");
   var arrWords = parole.split(" ");
 
@@ -27,10 +27,12 @@ function censura(testo, parole) {
 
       if (arrWords.includes(arrText[i])) {
         arrText[i] = "xxx";
+        cont++;
         console.log(arrText[i]);
       }
 }
     console.log(arrWords);
+    console.log("Ho censurato " + cont + " parole");
     return arrText.join(" ");
 
 }
@@ -39,3 +41,5 @@ var test = prompt("Inserisci un testo che verrà successivamente censurato");
 var parolex = prompt("Inserisci parole da censurare");
 
 console.log(censura(test, parolex));
+
+// Faccio un badword index
