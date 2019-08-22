@@ -13,20 +13,27 @@
 
 // Faccio fare l'input all'utente
 var test = prompt("Inserisci un testo che verrà successivamente censurato");
-
+var parolex = prompt("Inserisci parole da censurare");
 // Creo una lista di parole nell'array che verranno censuratore
 
-var x = ["cazzo","porco","cavolo","cacchio","basta","dio"];
 
 // Faccio la condizione affinchè le parole proibite vengano sostituite dall'x
 
-if (test.includes(x)) {
-  console.log(x);
-  var censura = "***";
-  x.replace(censura);
-  console.log(x);
+function censura(testo, parole) {
+  var arrText = testo.split(' ');
+  var arrWords = parole.split(' ');
+
+  for (var i = 0; i < arrTesto.length; i++) {
+    for (var j = 0; i < arrParole.length; j++) {
+      if (arrText[i].includes(arrWords[j])) {
+        arrTesto[i] = "xxx";
+        console.log(arrText[i]);
+      }
+    }
+    console.log(arrText);
+    return arrText.join(" ");
+}
 }
 
-console.log(test);
 
-// Faccio un badword index
+console.log(censura(test, parolex));
