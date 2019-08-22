@@ -26,7 +26,7 @@ function censura(testo, parole) {
   for (var i = 0; i < arrTesto.length; i++) {
     for (var j = 0; i < arrParole.length; j++) {
       if (arrText[i].includes(arrWords[j])) {
-        arrTesto[i] = "xxx";
+        arrText[i] = "xxx";
         console.log(arrText[i]);
       }
     }
